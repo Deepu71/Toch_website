@@ -105,6 +105,7 @@ p{
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
+    
 }
 .texto{
     text-overflow: ellipsis;
@@ -122,3 +123,106 @@ p{
 #toc{
     color: red;
 }
+.event-lst{
+  max-width:480px;             /* like your screenshot width */
+  margin:0 auto;
+  border-top:6px solid #9b1c0d;the red bar at the very top
+}
+.event-item{
+  display:flex ;
+  gap :20px;
+  padding:24px 0px;
+  border-bottom:px solid #e4e4e4;
+  
+}
+/* .event-item:last-child{border-bottom:none;} no line after the last one */
+
+/* ─────────────  Date square  ───────────── */
+.event-date{
+  width:66px;
+  min-width:66px;
+  height:80px;
+  border:2px solid #9b1c0d;
+  border-radius:4px;
+  text-align:center;
+  line-height:1.1;
+}
+.event-date .day{
+  font-size:28px;
+  font-weight:700;
+  color:#9b1c0d;
+  display:block;
+  margin-top:6px;
+}
+.event-date .month{
+  font-size:12px;
+  letter-spacing:1px;
+  color:#7d7d7d;
+  font-weight:600;
+}
+
+/* ─────────────  Content area  ───────────── */
+.event-title{
+  margin:0 0 10px;
+  font-size:19px;
+  line-height:1.3;
+  color:#000;
+}
+.event-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  font-size:14px;
+  color:#757575;
+}
+.event-meta i{      /* color the icons */
+  color:#d89b00;
+  margin-right:4px;
+}
+    
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 2px;
+      background-color: #eee;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .contact-form .g-recaptcha {
+      margin-bottom: 20px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background-color: #a2220d;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    .contact-form button:hover {
+      background-color: #891b0b;
+    }
