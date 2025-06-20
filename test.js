@@ -32,6 +32,23 @@ if(btncolor.style.color=="red")
     btncolor.style.color="green"
 else
     btncolor.style.color="red"
+
+    // Math.random gives rand no btw 0 & 1
+    // Math.random()*255 gives rand no btw 0 & 255 in decimal 
+    // Math.floor gives roundoff value of It
+// console.log(Math.floor(Math.random()*255));
+//    `${....}`
+// console.log(`random num is ${Math.floor(Math.random()*255)}`);
+let r,g,b,color;
+r=Math.floor(Math.random()*255)
+g=Math.floor(Math.random()*255)
+b=Math.floor(Math.random()*255)
+color=`rgb(${r},${g},${b})`
+
+      
+    document.getElementById("box").style.backgroundColor=color;
+
+
 }
 
 // arrow function.....!
@@ -44,4 +61,88 @@ function getName(e) {
     let clr = e.target.value;      
     // console.log(clr);
     document.getElementById("box").style.backgroundColor=clr;
+}
+function sum(num1,num2,p){
+    p(num1+num2);
+}
+function print(res){
+    console.log(res);
+}
+sum(1,2,print);   //calls function sum and provide res to function print(where func print is cld 'callback' fucntion)
+
+
+
+
+let student1={
+    age:22,
+    phone:98464546,
+    name:"gautham",
+    address:{
+        home:{place:"kozhicode"},
+        collage:{place:"ernakulam"}
+    }
+
+}
+let student2={
+    age:22,
+    phone:98464546,
+    name:"gautham",
+    address:{
+        home:{place:"kozhicode"},
+        collage:{place:"ernakulam"}
+    }
+
+}
+let student3={
+    age:22,
+    phone:98464546,
+    name:"gautham",
+    address:{
+        home:{place:"kozhicode"},
+        collage:{place:"ernakulam"}
+    }
+
+}
+let student4={
+    age:22,
+    phone:98464546,
+    name:"gautham",
+    address:{
+        home:{place:"kozhicode"},
+        collage:{place:"ernakulam"}
+    }
+
+}
+let students=[student1,student2,student3,student4]
+console.log(student3.address.collage.place);
+
+function checkName(e){
+    let Name=e.target.value
+    console.log(Name.length);
+    if(Name.length<3 || Name.length>12)
+    {
+        console.log("error:nmae must be btw 3 & 12");
+        document.getElementById("NameError").innerText="must btw 3 & 12"
+    }
+    else{
+     console.log("valid");
+     document.getElementById("NameError").innerText="valid"
+     document.getElementById("NameError").style.color="green"
+    }
+        
+}
+
+function checkEmail(e){
+    let Email=e.target.value
+    const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    console.log(emailRegex.test(Email));
+    
+}
+
+function checkPassword(e){
+    let password=e.target.value
+    const passwordRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    console.log(passwordRegex.test(password));
+    
+
 }
