@@ -135,14 +135,23 @@ function checkName(e){
 function checkEmail(e){
     let Email=e.target.value
     const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    console.log(emailRegex.test(Email));
+    // console.log(emailRegex.test(Email));
+    const isvalid=emailRegex.test(Email);
+    console.log(isvalid);
+    
+    document.getElementById("EmailError").innerText=isvalid? "valid" : "not valid";
+    document.getElementById("EmailError").style.color=isvalid? "green" : "red";
     
 }
 
 function checkPassword(e){
     let password=e.target.value
     const passwordRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    console.log(passwordRegex.test(password));
+    const isvalid=passwordRegex.test(password);
+    console.log(isvalid);
+    document.getElementById("passwordError").innerText=isvalid? "valid" : "not valid";
+    document.getElementById("passwordError").style.color=isvalid? "green" : "red";
+    
     
 
 }
